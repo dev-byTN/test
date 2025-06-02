@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Pokémon Store</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="checkout">
+      <form id="checkoutForm">
+        <h2>Shipping Information</h2>
+        <label>Full Name:</label>
+        <input type="text" required>
+
+        <label>Address:</label>
+        <input type="text" required>
+
+        <label>City:</label>
+        <input type="text" required>
+
+        <label>Zip Code:</label>
+        <input type="text" required>
+
+        <h2>Payment</h2>
+        <label>Card Number:</label>
+        <input type="text" placeholder="1234 5678 9012 3456" required>
+
+        <label>Expiry Date:</label>
+        <input type="text" placeholder="MM/YY" required>
+
+        <label>CVV:</label>
+        <input type="text" placeholder="123" required>
+
+        <button type="submit">Place Order</button>
+      </form>
+
+      <div class="summary">
+        <h2>Order Summary</h2>
+        <p>Subtotal: $<span id="summarySubtotal">0.00</span></p>
+        <p>Tax: $<span id="summaryTax">0.00</span></p>
+        <p>Shipping: $<span id="summaryShipping">5.00</span></p>
+        <h3>Total: $<span id="summaryTotal">0.00</span></h3>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pokémon Card Store. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Load cart from localStorage
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    let tax = subtotal * 0.10;
+    let shipping = cart.length > 0 ? 5 : 0;
+    let total = subtotal + tax + shipping;
+
+    document.getElementById('summarySubtotal').textContent = subtotal.toFixed(2);
+    document.getElementById('summaryTax').textContent = tax.toFixed(2);
+    document.getElementById('summaryShipping').textContent = shipping.toFixed(2);
+    document.getElementById('summaryTotal').textContent = total.toFixed(2);
+
+    document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Order placed successfully!');
+      localStorage.removeItem('cart');
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

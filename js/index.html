@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokémon Card Store</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Header and Hero Banner -->
+  <header>
+    <div class="hero">
+      <h1>Pokémon Card Store</h1>
+      <p>Catch 'em all — in your cart!</p>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Signup</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Featured Cards Section -->
+  <main>
+    <section class="featured">
+      <h2>Featured Cards</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="../img/pikachu.jpg" alt="Pikachu Card" height="350" width="250"/>
+          <h3>Pikachu</h3>
+          <p>Rarity: Common</p>
+          <p>Type: Electric</p>
+          <p>Price: $10</p>
+          <button onclick="addToCart('Pikachu')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="../img/charizard.jpg" alt="Charizard Card" height="350" width="250"/>
+          <h3>Charizard</h3>
+          <p>Rarity: Rare</p>
+          <p>Type: Fire</p>
+          <p>Price: $50</p>
+          <button onclick="addToCart('Charizard')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="../img/blastoise.png" alt="Blastoise Card" height="350" width="250"/>
+          <h3>Blastoise</h3>
+          <p>Rarity: Rare</p>
+          <p>Type: Water</p>
+          <p>Price: $45</p>
+          <button onclick="addToCart('Blastoise')">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Pokémon Card Store. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
