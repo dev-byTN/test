@@ -19,8 +19,58 @@ const products = [
     type: "Water",
     rarity: "Rare",
     price: 45,
-    image: "../images/blastoise.png"
+    image: "../img/blastoise.png"
+  },
+  {
+    name: "Venusaur",
+    type: "Grass",
+    rarity: "Rare",
+    price: 42,
+    image: "../img/venusaur.png"
+  },
+  {
+    name: "Mewtwo",
+    type: "Psychic",
+    rarity: "Legendary",
+    price: 100,
+    image: "../img/mewtwo.png"
+  },
+  {
+    name: "Snorlax",
+    type: "Normal",
+    rarity: "Uncommon",
+    price: 20,
+    image: "../img/snorlax.png"
+  },
+  {
+    name: "Gengar",
+    type: "Ghost",
+    rarity: "Rare",
+    price: 35,
+    image: "../img/gengar.png"
+  },
+  {
+    name: "Lucario",
+    type: "Fighting/Steel",
+    rarity: "Rare",
+    price: 40,
+    image: "../img/lucario.png"
+  },
+  {
+    name: "Jigglypuff",
+    type: "Fairy",
+    rarity: "Common",
+    price: 12,
+    image: "../img/jigglypuff.png"
+  },
+  {
+    name: "Dragonite",
+    type: "Dragon",
+    rarity: "Ultra Rare",
+    price: 80,
+    image: "../img/dragonite.png"
   }
+  
 ];
 
 const productList = document.getElementById("productList");
